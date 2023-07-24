@@ -110,7 +110,7 @@ def handle_phone(user_input):
     else:
         raise KeyError
     
-
+@input_error 
 def handle_search(user_input):
     search_str = re.match(r'\w+\s+(\w+)$', user_input).group(1)
     search_results = address_book.search(search_str)
